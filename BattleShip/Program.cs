@@ -12,9 +12,47 @@ namespace BattleShip
     {
         static void Main(string[] args)
         {
-            PlayerInfoModel player1 = CreatePlayer("player1");
-            PlayerInfoModel player2 = CreatePlayer("player2");
-           
+          
+            PlayerInfoModel activePlayer = CreatePlayer("player1");
+            PlayerInfoModel Opponent = CreatePlayer("player2");
+            PlayerInfoModel winner = null;
+
+
+
+            do
+            {
+                //Display grid from activePlayer on where they fired
+                 DisplayShotGrid(activePlayer);
+                //Ask active player for shot
+                //Determine if its valid shot
+                //Determine shot result
+
+
+            } while (winner == null);
+
+        }
+
+        private static void DisplayShotGrid(PlayerInfoModel activePlayer)
+        {
+            foreach(var gridSpot in activePlayer.ShotGrid)
+            {
+                if (gridSpot.Status == GridSpotStatus.Empty)
+                {
+                    Console.WriteLine($" {gridSpot.SpotLetter}{gridSpot.SpotNumber} ");
+                }
+                else if (gridSpot.Status == GridSpotStatus.Hit)
+                {
+                    Console.WriteLine(" X ");
+                }
+                else if (gridSpot.Status == GridSpotStatus.Miss)
+                {
+                    Console.WriteLine(" O ");
+                }
+                else
+                {
+                    Console.WriteLine(" ? ");
+                }
+            }
         }
 
         private static PlayerInfoModel CreatePlayer(string playerTitle)
@@ -50,7 +88,7 @@ namespace BattleShip
         {
             do
             {
-                Console.WriteLine($"Where do you want to place the ship?{model.ShipLocation.Count +1}:");
+                Console.WriteLine($"Where do you want to place the ship ? {model.ShipLocation.Count +1}:");
                 string location = Console.ReadLine();
                 bool isValidLocation = GameLogic.StoreShip(model,location);// Taking location from the user and model object
 
