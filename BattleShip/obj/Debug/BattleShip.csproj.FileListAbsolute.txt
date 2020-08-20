@@ -1,0 +1,10 @@
+C:\Users\Shujaul\source\repos\BattleShipLiteApp\BattleShip\bin\Debug\BattleShip.exe.config
+C:\Users\Shujaul\source\repos\BattleShipLiteApp\BattleShip\bin\Debug\BattleShip.exe
+C:\Users\Shujaul\source\repos\BattleShipLiteApp\BattleShip\bin\Debug\BattleShip.pdb
+C:\Users\Shujaul\source\repos\BattleShipLiteApp\BattleShip\bin\Debug\BattleShipLiteLibrary.dll
+C:\Users\Shujaul\source\repos\BattleShipLiteApp\BattleShip\bin\Debug\BattleShipLiteLibrary.pdb
+C:\Users\Shujaul\source\repos\BattleShipLiteApp\BattleShip\obj\Debug\BattleShip.csprojAssemblyReference.cache
+C:\Users\Shujaul\source\repos\BattleShipLiteApp\BattleShip\obj\Debug\BattleShip.csproj.CoreCompileInputs.cache
+C:\Users\Shujaul\source\repos\BattleShipLiteApp\BattleShip\obj\Debug\BattleShip.csproj.CopyComplete
+C:\Users\Shujaul\source\repos\BattleShipLiteApp\BattleShip\obj\Debug\BattleShip.exe
+C:\Users\Shujaul\source\repos\BattleShipLiteApp\BattleShip\obj\Debug\BattleShip.pdb

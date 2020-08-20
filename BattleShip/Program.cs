@@ -12,10 +12,14 @@ namespace BattleShip
     {
         static void Main(string[] args)
         {
+            PlayerInfoModel player1 = CreatePlayer("player1");
+            PlayerInfoModel player2 = CreatePlayer("player2");
+           
         }
 
-        private static PlayerInfoModel CreatePlayer()
+        private static PlayerInfoModel CreatePlayer(string playerTitle)
         {
+            Console.WriteLine($"Player Information for{playerTitle}");
             PlayerInfoModel player = new PlayerInfoModel();
             //Ask the User for their name
             player.UserName = GetUserName();
