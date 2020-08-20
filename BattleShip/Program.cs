@@ -1,6 +1,7 @@
 ﻿using BattleShipLiteLibrary;
 using BattleShipLiteLibrary.Models;
 using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,13 +24,45 @@ namespace BattleShip
             {
                 //Display grid from activePlayer on where they fired
                  DisplayShotGrid(activePlayer);
+
                 //Ask active player for shot
                 //Determine if its valid shot
                 //Determine shot result
 
+                RecordPlayerShot(activePlayer, Opponent);
+
+                //Determine if the game should continue
+                bool doseGameContinue = GameLogic.PlayerIsActive(Opponent);
+                //if over, set activePlayer is winner
+                //else, swap positon(activePlayer to oppnent)
+                if (doseGameContinue == true)
+                {
+                    //Swaping using temp 
+                    PlayerInfoModel temp = Opponent;
+                    Opponent = activePlayer;
+                    activePlayer = temp;
+
+                    //Swap using tuple
+                    (activePlayer, Opponent) = (Opponent, activePlayer);
+                }
+                else
+                {
+                    activePlayer = winner;
+                }
+
+
 
             } while (winner == null);
 
+        }
+
+        private static void RecordPlayerShot(PlayerInfoModel activePlayer, PlayerInfoModel opponent)
+        {
+            throw new NotImplementedException();
+            //Ask for shot
+            //Determine what row and column that is split is apart
+            //Determine its a valid shot
+            // Go back to begaining if not a valid shot
         }
 
         private static void DisplayShotGrid(PlayerInfoModel activePlayer)

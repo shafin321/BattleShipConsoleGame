@@ -45,6 +45,22 @@ namespace BattleShipLiteLibrary
                
         }
 
+        public static bool PlayerIsActive(PlayerInfoModel player)
+        {
+            bool isActive = false;
+
+            foreach(var ship in player.ShipLocation)
+            {
+                if (ship.Status != GridSpotStatus.Sunk)
+                {
+                    isActive = true;
+                }
+
+               }
+            return isActive;
+           
+        }
+
         private static void AddGridSpot(string letter, int number,PlayerInfoModel model)
         {
             GridSpotModel spot = new GridSpotModel();
